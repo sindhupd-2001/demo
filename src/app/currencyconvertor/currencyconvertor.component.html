@@ -1,0 +1,57 @@
+<body background="/assets/background.webp">
+    <div class="good"><pre>
+
+
+
+
+<i style="font-size: 200%;">CURRENCY-CONVERTOR</i>
+
+
+
+
+
+
+
+    </pre>
+<div style="font-size: 150%;" >currency: <input type="number" #num></div>
+<br>
+<br>
+<div class="box">
+<select #country1 style="width:10%">
+    <option value="select">--select--</option>
+    <option value="india">India</option>
+    <option value="usa">USA</option>
+    <option value="euro">Euro</option>
+</select> to
+<select #country2 style="width:10%">
+    <option value="select">--select--</option>
+    <option value="usa">USA</option>
+    <option value="euro">Euro</option>
+    <option value="india">India</option>
+</select>
+</div>
+
+<pre>
+
+
+</pre>
+<button (click)="task(country1.value,country2.value, num.value)" style="background-color:#0563af;color: white;">SUBMIT</button>
+<br>
+<br>
+<font   style="border:#0563af;  border-width:2px; border-style:solid;background-color: #0563af;color: white;">amount  :{{result}}</font>
+<pre> 
+
+
+
+
+
+
+
+
+
+
+
+    
+</pre>
+</div>
+</body>

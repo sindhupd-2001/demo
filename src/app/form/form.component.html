@@ -1,0 +1,29 @@
+<pre style="font-size: 150%;">
+    <b style="text-align:center;">Registration Form</b>
+</pre>
+<form #login="ngForm">
+<div>
+Name <br>
+<input #name="ngModel" requires minlength="2" maxlength="20" type="text" placeholder="enter your name"  name="name" ngModel>
+<div style="color:red;font-size:75%" *ngIf="(name.untouched)">*required</div>
+<div style="color: red;font-size: 75%;" *ngIf="(name.touched && name.invalid)">Name should contain Min 2 letters and Max 20  letters</div>
+<br> <br>
+E-mail ID <br>
+<input #email="ngModel" type="text" placeholder="enter your E-mail ID" name="email" ngModel>
+<div style="color:red;font-size:75%" *ngIf="(email.untouched)">*required</div>
+<br> <br>
+Phone Number <br>
+<input #phonenum="ngModel" required pattren="?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
+" minlength="10" type="text" placeholder="enter your Phone Number" name="number" ngModel>
+<div style="color: red;font-size:75%" *ngIf="(phonenum.untouched)">*required</div>
+<div style="color: red;font-size:75%" *ngIf="(phonenum.touched &&phonenum.invalid)">Please enter valid Phone Number</div>
+<br> <br>
+Passward <br>
+<input #passward="ngModel" required pattern="*[A-Z]*[a-z]*[0-9]*[!@#\$%\^&\*]" minlength="2" maxlength="8"type="text" name="passward" placeholder="passward" ngModel>
+<div style="color:red;font-size:75%" *ngIf="(passward.untouched)">*required</div>
+<div style="color: red;font-size:75%" *ngIf="(passward.touched&& passward.invalid)">Passward shoukd contain 1 special charachter and 1 number and Max length of 8</div>
+<br> <br>
+<button (click)="submit(login.value)">Submit</button>
+</div>
+</form>
+

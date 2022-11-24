@@ -1,0 +1,11 @@
+<div style="text-align: center;">
+Number 1: <input type="number" #firstnumber>
+<br> <br>
+Number 1: <input type="number" #secondnumber>
+<br> <br>
+<pre>
+<button (click)="add(firstnumber.value,secondnumber.value)" style="background-color:black;color: rgb(236, 227, 227);"> add </button>   <button (click)="sub(firstnumber.value,secondnumber.value)" style="background-color:black;color: rgb(236, 227, 227);"> sub </button> </pre>
+<pre>
+<button (click)="mul(firstnumber.value,secondnumber.value)" style="background-color:black;color: rgb(236, 227, 227);"> mul </button>   <button (click)="div(firstnumber.value,secondnumber.value)" style="background-color:black;color: rgb(236, 227, 227);"> div </button> </pre>
+<font style="border:#080808;  border-width:1px; border-style:solid;background-color: #e5f1fc;color: rgb(5, 4, 4);">sum: {{result}}</font>
+</div>
